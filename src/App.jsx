@@ -11,7 +11,7 @@ export default function App() {
       <div className="container">
         <h1>Weather App</h1>
         {/* <Form /> */}
-        <Weather />
+        <Weather defaultCity="Barcelona" />
         <footer>
           This project is created by{" "}
           <a href="https://www.linkedin.com/in/darya-petrenko/" target="_blanc">
