@@ -1,27 +1,13 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import Weather from "./weather";
-import Form from "./Form";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 
-import "./App.css";
+// import "./index.css";
 
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
+// import "modern-normalize";
 
-const handleFormSubmit = (city) => {
-  root.render(
-    <StrictMode>
-      <div className="App">
-        <Form onSubmit={handleFormSubmit} />
-        <Weather city={city} />
-      </div>
-    </StrictMode>
-  );
-};
-root.render(
-  <StrictMode>
-    <div className="App">
-      <Form onSubmit={handleFormSubmit} />
-    </div>
-  </StrictMode>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
 );
