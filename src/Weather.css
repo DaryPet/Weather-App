@@ -1,0 +1,51 @@
+.weather {
+  border: 1px solid blue;
+  border-radius: 8px;
+  padding: 24px;
+}
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.title {
+  margin-top: 24px;
+  color: #202124;
+  font-size: 32px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.list {
+  list-style-type: none;
+  color: #70757a;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 16px;
+  padding-left: 9px;
+  padding-top: 6px;
+}
+.item {
+  font-size: 16px;
+
+  height: auto;
+  line-height: 20px;
+}
+.temperature {
+  font-size: 48px;
+  font-weight: 400;
+}
+.img {
+  display: inline-block;
+  height: 60px;
+  margin-top: unset;
+  vertical-align: top;
+  width: 60px;
+}
+.unit {
+  color: #202124;
+  display: inline-block;
+  font-size: 16px;
+  line-height: 24px;
+  margin-top: 6px;
+  padding-left: 6px;
+  vertical-align: top;
+}
