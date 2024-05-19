@@ -2,7 +2,7 @@
 // import Layout from "../Layout/Layout";
 // import { useDispatch, useSelector } from "react-redux";
 // import Form from "./Form";
-import Weather from "./Weather";
+import Weather from "./weather";
 import "./App.css";
 
 export default function App() {
