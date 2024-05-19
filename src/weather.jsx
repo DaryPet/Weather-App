@@ -12,7 +12,7 @@ export default function Weather({ defaultCity }) {
 
   useEffect(() => {
     const apiKey = "be295ff8223f6e514d3fb6ob37t0a7a4";
-    const baseUrl = `https://api.shecodes.io/weather/v1/current?query=${defaultCity}&key=${apiKey}`;
+    const baseUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
 
     axios
       .get(baseUrl)
@@ -22,12 +22,9 @@ export default function Weather({ defaultCity }) {
       .catch((error) => {
         console.log(error);
       });
-  }, [defaultCity]);
+  }, [city]);
 
   function handleResponse(data) {
-    // setTemperature(response.data);
-    // const currentWeather = response.daily[0];
-    // const currentTemperature = currentWeather.temperature;(data.temperature.current);
     setData({
       temperature: data.temperature.current,
       humidity: data.temperature.humidity,
