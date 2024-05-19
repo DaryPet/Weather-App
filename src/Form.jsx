@@ -23,7 +23,7 @@ export default function Form({ onCityChange }) {
           onChange={handleChange}
           placeholder="Please enter a city..."
         />
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="button">
           Search
         </button>
       </div>

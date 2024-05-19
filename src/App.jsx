@@ -9,18 +9,31 @@ export default function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
-        {/* <Form /> */}
+        <h1 className="mainTitle">Weather App</h1>
         <Weather defaultCity="Barcelona" />
         <footer>
-          This project is created by{" "}
-          <a href="https://www.linkedin.com/in/darya-petrenko/" target="_blanc">
-            Darya Petrenko
-          </a>
-          and is{" "}
-          <a href="https://github.com/DaryPet/Weather-App" target="_blanc">
-            open-sourced on GitHub
-          </a>
+          <p className="footerText">
+            This project is created by{" "}
+            <a
+              className="footerLink"
+              href="https://www.linkedin.com/in/darya-petrenko/"
+              target="_blanc"
+            >
+              Darya Petrenko
+            </a>{" "}
+            and is{" "}
+            <a
+              className="footerLink"
+              href="https://github.com/DaryPet/Weather-App"
+              target="_blanc"
+            >
+              open-sourced on GitHub
+            </a>{" "}
+            and{" "}
+            <a className="footerLink" href="">
+              hosted on Netlify
+            </a>
+          </p>
         </footer>
       </div>
     </div>

@@ -63,17 +63,19 @@ export default function Weather({ defaultCity }) {
         <div className="row">
           <div className="col-7">
             <img className="img" src={data.iconUrl} alt="icon" />
-            {/* <span className="temperature">
-              {Math.round(data.temperature)}
-            </span>{" "}
-            <span className="unit">°C</span> */}
             <WeatherTemperature celsius={data.temperature} />
           </div>
           <div className="col-5">
             <ul className="list">
-              <li className="item">Precipitation: 7%</li>
-              <li className="item">Humidity: {data.humidity}%</li>
-              <li className="item">Wind: {data.wind}km/h</li>
+              <li className="item">
+                Precipitation: <span className="data">7%</span>
+              </li>
+              <li className="item">
+                Humidity: <span className="data">{data.humidity}%</span>
+              </li>
+              <li className="item">
+                Wind: <span className="data">{data.wind}km/h</span>
+              </li>
             </ul>
           </div>
         </div>
