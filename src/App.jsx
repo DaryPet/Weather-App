@@ -30,7 +30,7 @@ export default function App() {
               open-sourced on GitHub
             </a>{" "}
             and{" "}
-            <a className="footerLink" href="">
+            <a className="footerLink" href="https://weatherapp-009.netlify.app">
               hosted on Netlify
             </a>
           </p>
