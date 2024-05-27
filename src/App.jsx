@@ -1,7 +1,4 @@
-// import { Suspense, lazy, useEffect } from "react";
-// import Layout from "../Layout/Layout";
-// import { useDispatch, useSelector } from "react-redux";
-// import Form from "./Form";
+
 import Weather from "./weather";
 import "./App.css";
 

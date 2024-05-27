@@ -3,21 +3,33 @@ import Form from "./Form";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import WeatherTemperature from "./WeatherTemperature";
+import WeatherForecast from "./WeatherForecast";
 
 export default function Weather({ defaultCity }) {
   const [data, setData] = useState({});
   const [ready, setReady] = useState(false);
   const [city, setCity] = useState(defaultCity);
+  const [forecast, setForecast] = useState([]);
 
   useEffect(() => {
     const apiKey = "be295ff8223f6e514d3fb6ob37t0a7a4";
     const baseUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}`;
+    const forecastUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}`;
 
     axios
       .get(baseUrl)
       .then((response) => {
         handleResponse(response.data);
         console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+
+    axios
+      .get(forecastUrl)
+      .then((response) => {
+        setForecast(response.data.daily);
       })
       .catch((error) => {
         console.log(error);
@@ -68,9 +80,6 @@ export default function Weather({ defaultCity }) {
           <div className="col-5">
             <ul className="list">
               <li className="item">
-                Precipitation: <span className="data">7%</span>
-              </li>
-              <li className="item">
                 Humidity: <span className="data">{data.humidity}%</span>
               </li>
               <li className="item">
@@ -79,6 +88,7 @@ export default function Weather({ defaultCity }) {
             </ul>
           </div>
         </div>
+        <WeatherForecast forecast={forecast} />
       </div>
     );
   } else {
